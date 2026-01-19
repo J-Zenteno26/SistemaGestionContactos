@@ -25,7 +25,7 @@ class Agenda:
     def listar_contactos(self):
         return self._contactos
 
-    # 🔹 NUEVO: editar contacto
+    # editar contacto
     def editar_contacto(self, telefono, nuevo_nombre=None, nuevo_correo=None, nueva_direccion=None):
         contacto = self.buscar_por_telefono(telefono)
         if not contacto:
@@ -42,7 +42,7 @@ class Agenda:
         except ValueError:
             return False
 
-    # 🔹 NUEVO: eliminar contacto
+    # eliminar contacto
     def eliminar_contacto(self, telefono):
         contacto = self.buscar_por_telefono(telefono)
         if not contacto:
@@ -51,3 +51,4 @@ class Agenda:
         self._contactos.remove(contacto)
         del self._contactos_por_telefono[telefono]
         return True
+
